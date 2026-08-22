@@ -49,6 +49,11 @@
     <ul>
       <li>Your email address when you create an account, sign in, or request password recovery.</li>
       <li>A Supabase user identifier associated with your account.</li>
+      <li>
+        The username you choose during account creation. It is stored without
+        the “@” character, associated with your authenticated account and user
+        identifier, and displayed in your Profile as “@username.”
+      </li>
       <li>Authentication and session information needed to keep you signed in and secure your account.</li>
       <li>Account-related timestamps and authentication status maintained by our authentication provider.</li>
     </ul>
@@ -90,6 +95,10 @@
     <p>We use information to:</p>
     <ul>
       <li>Create and manage accounts and authenticated sessions.</li>
+      <li>
+        Identify your account within Cacao Shorts, display your chosen profile
+        identity, and support account functionality and personalization.
+      </li>
       <li>Provide login, logout, and password-recovery features.</li>
       <li>Stream episodes and provide access to private video content.</li>
       <li>Save and restore viewing progress.</li>
@@ -166,13 +175,13 @@
       <a href="../delete-account/">account-deletion page</a>.
     </p>
     <p>
-      Account deletion removes the Supabase Auth user, profile, user roles,
-      episode progress, favorites, and series watch state. The current Flutter
-      app does not write analytics events. Existing event records, if any, may
-      be retained with the user identifier removed. Limited de-identified,
-      operational, security, or legally required records may remain as described
-      in this Policy. We do not promise immediate deletion of provider
-      operational logs or backups.
+      Account deletion removes the Supabase Auth user, profile (including the
+      account-associated username), user roles, episode progress, favorites,
+      and series watch state. The current Flutter app does not write analytics
+      events. Existing event records, if any, may be retained with the user
+      identifier removed. Limited de-identified, operational, security, or
+      legally required records may remain as described in this Policy. We do
+      not promise immediate deletion of provider operational logs or backups.
     </p>
 
     <h2>13. Security</h2>
