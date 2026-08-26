@@ -64,6 +64,11 @@
       <li>Continue Watching information, including your last episode and position.</li>
       <li>Series you add to My List.</li>
       <li>Your choice to dismiss a series from Continue Watching.</li>
+      <li>
+        Private 1–5 star series ratings that you voluntarily submit while
+        signed in. Ratings are associated with your account and are not public
+        reviews.
+      </li>
     </ul>
 
     <h3>Push notification information</h3>
@@ -121,6 +126,7 @@
       <li>Stream episodes and provide access to private video content.</li>
       <li>Save and restore viewing progress.</li>
       <li>Provide Continue Watching and My List.</li>
+      <li>Provide the optional private series-rating feature.</li>
       <li>
         Deliver requested new-series notifications, route a tapped notification
         to the relevant content, and maintain notification delivery functionality.
@@ -192,6 +198,11 @@
       to provide the service.
     </p>
     <p>
+      Private series ratings are retained while reasonably needed to provide
+      the rating feature and maintain your account. They are deleted when you
+      delete your account through the application's account-deletion flow.
+    </p>
+    <p>
       Push notification registration data is retained while reasonably needed
       for notification functionality. When you disable <strong>New series
       notifications</strong> in the app, the device registration is disabled or
@@ -219,8 +230,9 @@
     <p>
       Account deletion removes the Supabase Auth user, profile (including the
       account-associated username), user roles, episode progress, favorites,
-      series watch state, and account-linked push notification device
-      registrations. The current Flutter app does not write analytics events.
+      series watch state, private series ratings, and account-linked push
+      notification device registrations. The current Flutter app does not write
+      analytics events.
       Existing event records, if any, may be retained with the user identifier
       removed. Limited de-identified, operational, security, or legally required
       records may remain as described in this Policy. We do not promise immediate
