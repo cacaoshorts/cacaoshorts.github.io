@@ -25,7 +25,7 @@
   <main id="main-content" class="page">
     <p class="eyebrow">Cacao Shorts</p>
     <h1>Privacy Policy</h1>
-    <p class="effective-date"><strong>Effective date:</strong> August 21, 2026</p>
+    <p class="effective-date"><strong>Effective date:</strong> August 26, 2026</p>
     <p class="lede">
       This Privacy Policy explains how information is handled when you use the
       Cacao Shorts Android application.
@@ -66,6 +66,16 @@
       <li>Your choice to dismiss a series from Continue Watching.</li>
     </ul>
 
+    <h3>Push notification information</h3>
+    <p>
+      If you are signed in and voluntarily enable <strong>New series
+      notifications</strong>, we may store a Firebase Cloud Messaging
+      device/app-instance registration token, your device platform (such as
+      Android), your enabled or disabled preference, registration, update, and
+      last-seen timestamps, and the association between that registration and
+      your Cacao Shorts account.
+    </p>
+
     <h3>Search and network information</h3>
     <p>
       Search terms are transmitted to our service provider to return matching
@@ -81,7 +91,7 @@
     <ul>
       <li>Precise or approximate location</li>
       <li>Contacts</li>
-      <li>Advertising IDs or device IDs</li>
+      <li>Advertising IDs or hardware device identifiers</li>
       <li>Photos from your device</li>
       <li>User-uploaded videos</li>
       <li>Microphone or audio recordings</li>
@@ -103,6 +113,10 @@
       <li>Stream episodes and provide access to private video content.</li>
       <li>Save and restore viewing progress.</li>
       <li>Provide Continue Watching and My List.</li>
+      <li>
+        Deliver requested new-series notifications, route a tapped notification
+        to the relevant content, and maintain notification delivery functionality.
+      </li>
       <li>Respond to support, privacy, and account-deletion requests.</li>
       <li>Protect the service, investigate misuse, and maintain reliable operations.</li>
       <li>Comply with applicable legal obligations.</li>
@@ -134,14 +148,21 @@
       Authentication emails may be delivered through infrastructure configured
       for the Supabase project.
     </p>
+    <p>
+      Cacao Shorts uses Firebase Cloud Messaging, provided by Google, to deliver
+      push notifications that users choose to enable. Firebase and Google may
+      process technical information necessary to provide notification delivery
+      under their own privacy terms.
+    </p>
 
     <h2>9. Data Sharing</h2>
     <p>
       We do not sell personal information. We disclose information to Supabase
-      as needed to operate the service. We may also disclose information when
-      reasonably necessary to comply with applicable law, respond to valid legal
-      process, protect users or the service, investigate fraud or abuse, or
-      establish, exercise, or defend legal claims.
+      as needed to operate the service and to Firebase and Google as needed to
+      deliver requested push notifications. We may also disclose information
+      when reasonably necessary to comply with applicable law, respond to valid
+      legal process, protect users or the service, investigate fraud or abuse,
+      or establish, exercise, or defend legal claims.
     </p>
 
     <h2>10. Advertising</h2>
@@ -149,7 +170,9 @@
       The current app contains no advertising SDKs, does not perform
       personalized advertising, does not share personal information for
       advertising, and does not track users across third-party apps or services
-      for advertising purposes.
+      for advertising purposes. Cacao Shorts uses push notification registration
+      tokens for app notification functionality, not for advertising, cross-app
+      tracking, or personalized ads.
     </p>
 
     <h2>11. Data Retention</h2>
@@ -158,6 +181,15 @@
       or until you remove the relevant item where the app supports removal, the
       account is deleted, or the information is no longer reasonably required
       to provide the service.
+    </p>
+    <p>
+      Push notification registration data is retained while reasonably needed
+      for notification functionality. When you disable <strong>New series
+      notifications</strong> in the app, the device registration is disabled or
+      removed according to the app's operation. You can re-enable the preference
+      later. Account deletion removes notification registration data linked to
+      the deleted account, subject to the provider-log and backup limitations
+      described below.
     </p>
     <p>
       Limited operational or security records may be retained when reasonably
@@ -177,11 +209,12 @@
     <p>
       Account deletion removes the Supabase Auth user, profile (including the
       account-associated username), user roles, episode progress, favorites,
-      and series watch state. The current Flutter app does not write analytics
-      events. Existing event records, if any, may be retained with the user
-      identifier removed. Limited de-identified, operational, security, or
-      legally required records may remain as described in this Policy. We do
-      not promise immediate deletion of provider operational logs or backups.
+      series watch state, and account-linked push notification device
+      registrations. The current Flutter app does not write analytics events.
+      Existing event records, if any, may be retained with the user identifier
+      removed. Limited de-identified, operational, security, or legally required
+      records may remain as described in this Policy. We do not promise immediate
+      deletion of provider operational logs or backups.
     </p>
 
     <h2>13. Security</h2>
