@@ -68,12 +68,20 @@
 
     <h3>Push notification information</h3>
     <p>
-      If you are signed in and voluntarily enable <strong>New series
-      notifications</strong>, we may store a Firebase Cloud Messaging
+      When Cacao Shorts starts, Firebase services used for push-notification
+      infrastructure may automatically generate and process a Firebase
+      Installation ID or related technical registration information. This may
+      occur before you enable <strong>New series notifications</strong>.
+    </p>
+    <p>
+      If you are signed in and voluntarily enable that setting, Cacao Shorts may
+      associate and register the device for account-linked new-series
+      notifications. We may then store a Firebase Cloud Messaging
       device/app-instance registration token, your device platform (such as
       Android), your enabled or disabled preference, registration, update, and
       last-seen timestamps, and the association between that registration and
-      your Cacao Shorts account.
+      your Cacao Shorts account. The in-app setting controls this account-linked
+      registration and delivery through the notification feature.
     </p>
 
     <h3>Search and network information</h3>
@@ -149,10 +157,11 @@
       for the Supabase project.
     </p>
     <p>
-      Cacao Shorts uses Firebase Cloud Messaging, provided by Google, to deliver
-      push notifications that users choose to enable. Firebase and Google may
-      process technical information necessary to provide notification delivery
-      under their own privacy terms.
+      Cacao Shorts uses Firebase Cloud Messaging, provided by Google, for push
+      notification infrastructure and to deliver notifications that users
+      choose to enable. Firebase and Google may process technical registration
+      information necessary to provide this infrastructure and notification
+      delivery under their own privacy terms.
     </p>
 
     <h2>9. Data Sharing</h2>
@@ -189,7 +198,8 @@
       removed according to the app's operation. You can re-enable the preference
       later. Account deletion removes notification registration data linked to
       the deleted account, subject to the provider-log and backup limitations
-      described below.
+      described below. Disabling the in-app notification setting does not itself
+      necessarily delete the Firebase Installation ID maintained by Firebase.
     </p>
     <p>
       Limited operational or security records may be retained when reasonably
