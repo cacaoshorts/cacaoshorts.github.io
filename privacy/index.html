@@ -25,7 +25,7 @@
   <main id="main-content" class="page">
     <p class="eyebrow">Cacao Shorts</p>
     <h1>Privacy Policy</h1>
-    <p class="effective-date"><strong>Effective date:</strong> August 27, 2026</p>
+    <p class="effective-date"><strong>Effective date:</strong> September 6, 2026</p>
     <p class="lede">
       This Privacy Policy explains how information is handled when you use the
       Cacao Shorts Android application.
@@ -45,21 +45,56 @@
     </p>
 
     <h2>3. Information We Collect</h2>
+    <h3>Guest Mode</h3>
+    <p>
+      You can use Cacao Shorts without first creating a registered account. On
+      first use, the app automatically creates a temporary Guest identity and
+      authenticated session. That Guest identity has an internal Cacao Shorts
+      user identifier. It is not intended to identify you by your real-world
+      name, but it is still an identifier associated with your Guest activity.
+    </p>
+    <p>
+      Guest viewing progress, episode-completion and Continue Watching state,
+      My List choices, and private series ratings may be stored on our servers
+      under that temporary Guest identifier. Cacao Shorts does not enroll a
+      Guest in account-linked push notifications in the current version.
+    </p>
+    <p>
+      A Guest may choose to create a new account while keeping eligible Guest
+      data, or sign in to an existing account and request a transfer. In an
+      authorized transfer, viewing and progress state may be reconciled, My List
+      may be combined and deduplicated, and ratings may be transferred. Existing
+      permanent-account information may take precedence when the same item has
+      conflicting data. The temporary Guest identity may then be removed after
+      a successful transfer.
+    </p>
+    <aside class="callout warning">
+      <p><strong>Keep access to your Guest session if you want to keep your Guest data.</strong></p>
+      <p>
+        If you clear Cacao Shorts app storage, uninstall the app, lose the
+        device or session, or otherwise lose access before creating or signing
+        in to an account, Cacao Shorts may no longer be able to reconnect you to
+        the previously stored Guest data. Clearing app storage or uninstalling
+        the app does not by itself delete server-side Guest data.
+      </p>
+    </aside>
+
     <h3>Account and authentication information</h3>
     <ul>
       <li>Your email address when you create an account, sign in, or request password recovery.</li>
-      <li>A Supabase user identifier associated with your account.</li>
+      <li>An internal user identifier associated with a Guest identity or permanent account.</li>
       <li>
-        If you choose to sign in with Google or Facebook (Meta), Cacao Shorts
-        and Supabase may receive and store provider-supplied account information
-        needed for authentication and account linking. Depending on what the
-        provider makes available, this may include your email address, provider
-        account identifier, display name, profile-picture or avatar URL, and
-        related profile metadata.
+        If you choose a third-party sign-in method such as Google, Cacao Shorts
+        and its authentication provider receive information needed for that
+        authentication, including your email address, provider account
+        identifier, and related authentication metadata. The current Google
+        flow requests identity and email access; Cacao Shorts does not request
+        the Google profile scope or copy a provider profile picture into your
+        Cacao Shorts profile.
       </li>
       <li>
         The username you independently choose during account creation. It is
-        not automatically derived from your Google or Facebook display name or
+        not automatically derived from a provider display name or
         email. It is stored without the “@” character, associated with your
         authenticated account and user identifier, and displayed in your
         Profile as “@username.”
@@ -68,7 +103,7 @@
         Your optional selection of a predefined Cacao Shorts profile avatar.
         These avatars are bundled and predesigned by Cacao Shorts; we store only
         the selected avatar identifier associated with your account. You do not
-        upload personal profile-photo bytes, and Google or Facebook provider
+        upload personal profile-photo bytes, and provider
         profile pictures are not copied or used as your Cacao Shorts avatar.
       </li>
       <li>Authentication and session information needed to keep you signed in and secure your account.</li>
@@ -88,6 +123,19 @@
       </li>
     </ul>
 
+    <h3>Device-local information</h3>
+    <p>
+      The Guest registration reminder stores minimal information only on your
+      device: a one-way fingerprint scoped to the Guest identity and the time a
+      reminder was dismissed, so the app can apply its 14-day cooldown. The
+      reminder does not introduce new server-side collection. The app also
+      stores limited local state needed to resume an account upgrade or an
+      authorized Guest-data transfer. A temporary transfer credential is kept
+      in platform-protected app storage while a transfer is pending. Cacao
+      Shorts does not store your plaintext password or authentication token in
+      that reminder or transfer state.
+    </p>
+
     <h3>Push notification information</h3>
     <p>
       When Cacao Shorts starts, Firebase services used for push-notification
@@ -96,7 +144,8 @@
       occur before you enable <strong>New series notifications</strong>.
     </p>
     <p>
-      If you are signed in and voluntarily enable that setting, Cacao Shorts may
+      If you have a permanent account and voluntarily enable that setting,
+      Cacao Shorts may
       associate and register the device for account-linked new-series
       notifications. We may then store a Firebase Cloud Messaging
       device/app-instance registration token, your device platform (such as
@@ -108,12 +157,13 @@
 
     <h3>Search and network information</h3>
     <p>
-      Search terms are transmitted to our service provider to return matching
-      series. Cacao Shorts does not intentionally save search history in a
-      product database. Like most online services, our service provider may
-      process ordinary request information such as IP address, request time,
-      requested endpoint, and technical HTTP or client information for service
-      delivery, security, and operations.
+      The app downloads the available published catalog and filters it on your
+      device as you type. Cacao Shorts does not transmit or retain the words you
+      enter in the Search field. Like most online services, our service provider
+      may process ordinary request information for catalog and other network
+      requests, such as IP address, request time, requested endpoint, and
+      technical HTTP or client information, for service delivery, security, and
+      operations.
     </p>
 
     <h2>4. Information We Do Not Intentionally Collect</h2>
@@ -138,13 +188,18 @@
       <li>
         Identify your account within Cacao Shorts, display your chosen profile
         identity and predefined avatar, and support account functionality,
-        profile customization, and personalization.
+        profile customization, and account features.
       </li>
       <li>Provide login, logout, and password-recovery features.</li>
       <li>Stream episodes and provide access to private video content.</li>
       <li>Save and restore viewing progress.</li>
       <li>Provide Continue Watching and My List.</li>
       <li>Provide the optional private series-rating feature.</li>
+      <li>
+        Create and maintain Guest sessions, present a device-local registration
+        reminder, and complete user-requested Guest account upgrades or data
+        transfers.
+      </li>
       <li>
         Deliver requested new-series notifications, route a tapped notification
         to the relevant content, and maintain notification delivery functionality.
@@ -163,18 +218,20 @@
       app-private storage so you can remain signed in on the same device.
     </p>
     <p>
-      Cacao Shorts also supports sign-in through Google and Facebook. Provider
+      Cacao Shorts supports sign-in through Google. Provider
       information is used for authentication, account creation, account
       linking, account security, and account management. Authenticated
       identities may be linked to the same Cacao Shorts account when Supabase
       and the provider determine that eligible verified account information
       matches; matching information does not guarantee that every identity will
-      be linked automatically. Cacao Shorts does not request friends, birthday,
-      gender, location, posts, photo-library access, contacts, or advertising
-      information through these login methods.
+      be linked automatically. Although support code for another provider may
+      exist, Facebook sign-in is not offered in the current public interface.
+      Cacao Shorts does not request friends, birthday, gender, location, posts,
+      photo-library access, contacts, or advertising information through the
+      currently offered login methods.
     </p>
 
-    <h2>7. Viewing Activity and Personalization</h2>
+    <h2>7. Viewing Activity and App Features</h2>
     <p>
       We associate viewing progress, completion status, Continue Watching, and
       My List with your account. This allows the app to resume episodes, select
@@ -192,8 +249,8 @@
       for the Supabase project.
     </p>
     <p>
-      If you choose social sign-in, Google or Meta/Facebook processes
-      authentication information under its own privacy terms. Cacao Shorts uses
+      If you choose social sign-in, the selected authentication provider
+      processes authentication information under its own privacy terms. Cacao Shorts uses
       provider-supplied information made available through Supabase only for the
       authentication and account purposes described in this Policy.
     </p>
@@ -211,7 +268,7 @@
       as needed to operate the service and to Firebase and Google as needed to
       provide push-notification infrastructure and deliver requested push
       notifications. When you choose social sign-in, relevant authentication
-      information is also processed by Google or Meta/Facebook. We may also
+      information is also processed by that provider. We may also
       disclose information when reasonably necessary to comply with applicable
       law, respond to valid legal process, protect users or the service,
       investigate fraud or abuse, or establish, exercise, or defend legal claims.
@@ -240,6 +297,24 @@
       delete your account through the application's account-deletion flow.
     </p>
     <p>
+      Guest data is currently not subject to a fixed automatic deletion
+      schedule. It may remain associated with the temporary Guest identifier
+      while the Guest session exists and may be retained if that session is
+      lost. If you create a new account using the Guest upgrade flow, eligible
+      data remains with the same account. If you request a transfer to an
+      existing account, eligible Guest data is reconciled with that account and
+      the temporary Guest identity is removed after the transfer and related
+      cleanup succeed. We may introduce a documented inactivity or cleanup
+      process in the future.
+    </p>
+    <p>
+      The device-local Guest reminder and pending-flow information described
+      above remains in the app's local storage until it is replaced or removed,
+      including when app storage is cleared or the app is uninstalled. This
+      device-local reminder information is not collected by Cacao Shorts on its
+      servers.
+    </p>
+    <p>
       Push notification registration data is retained while reasonably needed
       for notification functionality. When you disable <strong>New series
       notifications</strong> in the app, the device registration is disabled or
@@ -259,7 +334,7 @@
 
     <h2>12. Account and Data Deletion</h2>
     <p>
-      You can permanently delete your account in the app by opening
+      If you have a permanent account, you can permanently delete it in the app by opening
       <strong>Profile</strong> and selecting <strong>Delete Account</strong>.
       You can also follow the instructions on our
       <a href="../delete-account/">account-deletion page</a>.
@@ -268,20 +343,28 @@
       Account deletion removes the Supabase Auth user, profile (including the
       account-associated username), user roles, episode progress, favorites,
       series watch state, private series ratings, and account-linked push
-      notification device registrations. The current Flutter app does not write
-      analytics events.
-      Existing event records, if any, may be retained with the user identifier
-      removed. Limited de-identified, operational, security, or legally required
-      records may remain as described in this Policy. We do not promise immediate
-      deletion of provider operational logs or backups.
+      notification device registrations. The current app does not write
+      analytics events. Limited legacy, de-identified, operational, security,
+      or legally required records may remain as described in this Policy. We do
+      not promise immediate deletion of provider operational logs or backups.
     </p>
     <p>
-      Deleting your Cacao Shorts account does not delete your Google or Facebook
-      account and may not, by itself, revoke authorization previously granted to
-      those providers. You may manage connected-app permissions through your
-      respective Google or Meta account settings. Provider-side records remain
-      subject to the provider's own systems, retention practices, and privacy
-      terms.
+      The current Guest Profile does not offer the permanent-account deletion
+      control. If you still have access to an active Guest session and want help
+      deleting its server-side data, contact us using the address below. We may
+      need information available from that active session to verify and locate
+      the Guest data safely. If the Guest session has already been lost, its
+      pseudonymous nature may prevent us from reliably reconnecting a request
+      to that data. Clearing app storage or uninstalling does not itself delete
+      server-side Guest data.
+    </p>
+    <p>
+      Deleting your Cacao Shorts account does not delete an account held with a
+      third-party sign-in provider and may not, by itself, revoke authorization
+      previously granted to that provider. You can manage connected-app
+      permissions separately through the provider's account settings.
+      Provider-side records remain subject to the provider's own systems,
+      retention practices, and privacy terms.
     </p>
 
     <h2>13. Security</h2>
